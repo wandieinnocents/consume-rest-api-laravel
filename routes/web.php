@@ -24,7 +24,8 @@ Route::prefix('authors')->group(function () {
 // autors/all_authors
 Route::get('/all_authors','App\Http\Controllers\AuthorControllerApi@GetAllAuthors');
 // add author
-Route::get('/add_author','App\Http\Controllers\AuthorControllerApi@AddAuthor');
+Route::post('/add_author','App\Http\Controllers\AuthorControllerApi@store');
+Route::get('/create','App\Http\Controllers\AuthorControllerApi@create');
 
 
 });
