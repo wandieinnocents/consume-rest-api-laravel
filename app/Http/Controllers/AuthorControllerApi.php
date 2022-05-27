@@ -26,21 +26,25 @@ class AuthorControllerApi extends Controller
         return view('authors.all_authors', compact('responseBody'));
 
     }
+    public function create(){
+        return view('authors.add_author');
+    }
 
     // Add author
-    public function AddAuthor(){
+    public function store(Request $request){
 
         $client = new Client();
         $url = 'http://localhost:8002/api/authors';
-        $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjUzNjc2NjY5LCJleHAiOjE2NTM2ODAyNjksIm5iZiI6MTY1MzY3NjY2OSwianRpIjoib3k0eGpJejA4Sktxb0JOdiIsInN1YiI6IjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Hj02hiuJrg5epvynpiz8SvRf388ZknWnKr7CSlvXwTA';
+        $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjUzNjgxNTExLCJleHAiOjE2NTM2ODUxMTEsIm5iZiI6MTY1MzY4MTUxMSwianRpIjoiR2JwUnBMMjJjc3VnUmNMdSIsInN1YiI6IjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZNuqzRwbtDkKwf9FUMTd__VSqeCWSmbTROAlGFATmf8';
         //pick form parameters
+        //'name' => 'wandie' //for static data //works
         $form_params = [
-            'name'                        => 'kapere',
-            'email'                       => 'ldaadfkaperejohn.smith@gmail.com',
-            'twitter'                     => '@innocentWandie',
-            'github'                      => 'wandieinnocents',
-            'location'                      => 'kampala',
-            'latest_article_published'    => 'There is the latest',
+            'name'                        => $request->name,
+            'email'                       => $request->email,
+            'twitter'                     => $request->twitter,
+            'github'                      => $request->github,
+            'location'                    => $request->location,
+            'latest_article_published'    => $request->latest_article_published,
             
         ];
         //response to post data
@@ -50,11 +54,12 @@ class AuthorControllerApi extends Controller
                 'Accept' => 'application/json',
             ],
            ]);
-        
+        //    dd("wandie storing");
         
         $responseBody = json_decode($response->getBody()->getContents());
+        return redirect('/authors/all_authors');
 
-        dd($responseBody);
+        
       
  
      }

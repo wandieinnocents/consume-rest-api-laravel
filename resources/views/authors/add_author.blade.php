@@ -312,6 +312,7 @@
               </div>
               <div class="card-body">
                 <form method="post" action="/authors/add_author" role="form text-left">
+                  @csrf()
                   <div class="mb-3">
                     <input type="text" class="form-control"  name="name" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
                   </div>
@@ -333,7 +334,7 @@
                   
                   
                   <div class="text-center">
-                    <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Add Author</button>
+                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Add Author</button>
                   </div>
                 </form>
               </div>

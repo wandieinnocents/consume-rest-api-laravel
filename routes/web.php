@@ -20,11 +20,13 @@ Route::get('/', function () {
 
 // Authors //Consuming api routes
 Route::prefix('authors')->group(function () {
-// consume api without key
-// autors/all_authors
+// show all authors
 Route::get('/all_authors','App\Http\Controllers\AuthorControllerApi@GetAllAuthors');
-// add author
-Route::get('/add_author','App\Http\Controllers\AuthorControllerApi@AddAuthor');
+// get form to add author
+Route::get('/create','App\Http\Controllers\AuthorControllerApi@create');
+// store author to remote microservice 
+Route::post('/add_author','App\Http\Controllers\AuthorControllerApi@store');
+
 
 
 });
