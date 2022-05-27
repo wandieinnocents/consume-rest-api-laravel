@@ -37,8 +37,8 @@ class AuthorControllerApi extends Controller
         $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjUzNjc2NjY5LCJleHAiOjE2NTM2ODAyNjksIm5iZiI6MTY1MzY3NjY2OSwianRpIjoib3k0eGpJejA4Sktxb0JOdiIsInN1YiI6IjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Hj02hiuJrg5epvynpiz8SvRf388ZknWnKr7CSlvXwTA';
 
         $form_params = [
-            'name'                        => 'Komaketch',
-            'email'                       => 'john.smith@gmail.com',
+            'name'                        => 'dev1',
+            'email'                       => '2john.smith@gmail.com',
             'twitter'                     => '@innocentWandie',
             'github'                      => 'wandieinnocents',
             'location'                      => 'kampala',
@@ -52,7 +52,7 @@ class AuthorControllerApi extends Controller
                 'Accept' => 'application/json',
             ],
            ]);
-        dd($response);
+        
         $response = $response->getBody()->getContents();
  
      }
