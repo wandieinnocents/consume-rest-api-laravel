@@ -311,24 +311,24 @@
                 
               </div>
               <div class="card-body">
-                <form role="form text-left">
+                <form method="post" action="/authors/add_author" role="form text-left">
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+                    <input type="text" class="form-control"  name="name" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
                   </div>
                   <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                    <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
                   </div>
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Twitter" aria-label="Twitter" aria-describedby="email-addon">
+                    <input type="text" class="form-control"  name="twitter" placeholder="Twitter" aria-label="Twitter" aria-describedby="email-addon">
                   </div>
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Github" aria-label="Github" aria-describedby="email-addon">
+                    <input type="text" class="form-control"  name="github" placeholder="Github" aria-label="Github" aria-describedby="email-addon">
                   </div>
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Location" aria-label="Location" aria-describedby="email-addon">
+                    <input type="text" class="form-control"  name="location" placeholder="Location" aria-label="Location" aria-describedby="email-addon">
                   </div>
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Latest Article" aria-label="Latest article" aria-describedby="email-addon">
+                    <input type="text" class="form-control"  name="latest_article_published" placeholder="Latest Article" aria-label="Latest article" aria-describedby="email-addon">
                   </div>
                   
                   
