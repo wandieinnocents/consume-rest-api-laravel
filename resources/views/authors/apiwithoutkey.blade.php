@@ -354,12 +354,36 @@
       </div>
     </nav>
     <!-- End Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- START ROW FETCH DATA -->
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Authors table</h6>
+              <h6>Fetch Authors without Key</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -384,8 +408,7 @@
                             <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Alexa Liras</h6>
-                            <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
+                            <h6 class="mb-0 text-sm">{{ $response->name }}</h6>
                           </div>
                         </div>
                       </td>
@@ -418,6 +441,20 @@
           </div>
         </div>
       </div>
+
+<!-- ROW  FETCH DATA -->
+
+
+
+
+
+
+
+
+
+
+
+
       
 
 
