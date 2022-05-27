@@ -23,6 +23,9 @@ Route::prefix('authors')->group(function () {
 // consume api without key
 // autors/all_authors
 Route::get('/all_authors','App\Http\Controllers\AuthorControllerApi@GetAllAuthors');
+// add author
+Route::get('/add_authors','App\Http\Controllers\AuthorControllerApi@AddAuthor');
+
 
 });
 
