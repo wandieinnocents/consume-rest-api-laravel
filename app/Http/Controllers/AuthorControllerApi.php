@@ -54,7 +54,7 @@ class AuthorControllerApi extends Controller
                 'Accept' => 'application/json',
             ],
            ]);
-           dd("wandie storing");
+        //    dd("wandie storing");
         
         $responseBody = json_decode($response->getBody()->getContents());
 
