@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-   admin
+   All authors
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -314,7 +314,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-               <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="/">Add Author</a>
+               <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="/authors/add_author">Add Author</a>
 
             </div>
             <div class="card-body px-0 pt-0 pb-2">
