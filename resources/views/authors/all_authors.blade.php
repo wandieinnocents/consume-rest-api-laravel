@@ -314,7 +314,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-               <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="/authors/add_author">Add Author</a>
+               <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="/authors/create">Add Author</a>
 
             </div>
             <div class="card-body px-0 pt-0 pb-2">

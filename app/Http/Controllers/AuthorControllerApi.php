@@ -57,6 +57,7 @@ class AuthorControllerApi extends Controller
         //    dd("wandie storing");
         
         $responseBody = json_decode($response->getBody()->getContents());
+        return redirect('/authors/all_authors');
 
         
       
