@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users','App\Http\Controllers\AdminController@users');
+
+Route::get('/apiwithoutkey','App\Http\Controllers\AdminController@FetchAuthorsWithoutApiKey');
+Route::get('/apiwithkey','App\Http\Controllers\AdminController@FetchAuthorsWithApiKey');
+
