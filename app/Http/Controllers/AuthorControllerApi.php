@@ -23,7 +23,7 @@ class AuthorControllerApi extends Controller
         $responseBody = json_decode($response->getBody());
         // dd($responseBody);
 
-        return view('authors.apiwithkey', compact('responseBody'));
+        return view('authors.all_authors', compact('responseBody'));
 
     }
 
