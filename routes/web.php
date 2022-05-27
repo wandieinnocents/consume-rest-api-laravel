@@ -19,6 +19,13 @@ Route::get('/', function () {
 
 Route::get('/users','App\Http\Controllers\AdminController@users');
 
+Route::prefix('authors')->group(function () {
+// consume api without key
 Route::get('/apiwithoutkey','App\Http\Controllers\AuthorControllerApi@FetchAuthorsWithoutApiKey');
+// consume api with key
 Route::get('/apiwithkey','App\Http\Controllers\AuthorControllerApi@FetchAuthorsWithApiKey');
+
+
+});
+
 
