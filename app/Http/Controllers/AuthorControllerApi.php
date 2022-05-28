@@ -20,10 +20,9 @@ class AuthorControllerApi extends Controller
             'Accept' => 'application/json',
         ],
        ]);
-
+        // response
         $responseBody = json_decode($response->getBody());
-        // dd($responseBody);
-
+        //redirect
         return view('authors.all_authors', compact('responseBody'));
 
     }
