@@ -32,13 +32,12 @@ class AuthorControllerApi extends Controller
         return view('authors.add_author');
     }
 
-    // Add author
+    // save author to remote db:method
     public function store(Request $request){
 
         $client = new Client();
         $url = 'http://localhost:8002/api/authors';
         $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjUzNjgxNTExLCJleHAiOjE2NTM2ODUxMTEsIm5iZiI6MTY1MzY4MTUxMSwianRpIjoiR2JwUnBMMjJjc3VnUmNMdSIsInN1YiI6IjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZNuqzRwbtDkKwf9FUMTd__VSqeCWSmbTROAlGFATmf8';
-        //pick form parameters
         //'name' => 'wandie' //for static data //works
         $form_params = [
             'name'                        => $request->name,
@@ -47,7 +46,6 @@ class AuthorControllerApi extends Controller
             'github'                      => $request->github,
             'location'                    => $request->location,
             'latest_article_published'    => $request->latest_article_published,
-            
         ];
         //response to post data
         $response = $client->post($url, ['form_params' => $form_params],[
@@ -56,8 +54,7 @@ class AuthorControllerApi extends Controller
                 'Accept' => 'application/json',
             ],
            ]);
-        //    dd("wandie storing");
-        
+        // response
         $responseBody = json_decode($response->getBody()->getContents());
         return redirect('/authors/all_authors');
 
