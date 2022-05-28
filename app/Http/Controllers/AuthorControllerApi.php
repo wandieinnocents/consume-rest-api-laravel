@@ -26,6 +26,8 @@ class AuthorControllerApi extends Controller
         return view('authors.all_authors', compact('responseBody'));
 
     }
+
+    // show form to capture data from form
     public function create(){
         return view('authors.add_author');
     }
