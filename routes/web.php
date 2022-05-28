@@ -27,12 +27,7 @@ Route::get('/create','App\Http\Controllers\AuthorControllerApi@create');
 // store author to remote microservice 
 Route::post('/add_author','App\Http\Controllers\AuthorControllerApi@store');
 
-
-
 });
-
-// users
-Route::get('/users','App\Http\Controllers\AdminController@users');
 
 
 

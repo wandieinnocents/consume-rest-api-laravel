@@ -57,16 +57,7 @@ class AuthorControllerApi extends Controller
         // response
         $responseBody = json_decode($response->getBody()->getContents());
         return redirect('/authors/all_authors');
-
-        
-      
- 
-     }
-
-
-
-
-
+}
 
 
 }
